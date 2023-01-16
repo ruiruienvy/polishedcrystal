@@ -1,10 +1,14 @@
+if DEF(FAITHFUL)
 	db  78,  84,  78, 100, 109,  85 ; 534 BST
+	;   hp  atk  def  spd  sat  sdf
+else
+	db  78,  84,  78, 101, 109,  85 ; 535 BST
 	;   hp  atk  def  spd  sat  sdf
 
 if DEF(FAITHFUL)
 	db FIRE, FIRE ; type
 else
-	db FIRE, GROUND ; type
+	db FIRE, GHOST ; type
 endc
 	db 45 ; catch rate
 	db 209 ; base exp
