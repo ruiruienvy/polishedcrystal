@@ -672,17 +672,17 @@ ClefairyEvosAttacks:
 	db 7, SING
 	db 10, DOUBLE_SLAP
 	db 13, DEFENSE_CURL
-	db 16, SWEET_KISS ; Follow Me → new move
-	db 19, DIZZY_PUNCH ; Bestow → Crystal unique move
+	db 16, CALM_MIND ; Follow me → new move
+	db 19, DIZZY_PUNCH ; Crystal unique move
 	db 22, TRI_ATTACK ; Wake-Up Slap → RBY TM move
 	db 25, MINIMIZE
+	db 28, EXTRASENSORY ; Gravity
 	db 28, DRAIN_KISS ; Stored Power → Sw/Sh move
 	db 31, METRONOME
-	db 34, REFLECT ; Cosmic Power → TM move
-	db 37, LIGHT_SCREEN ; Lucky Chant → TM move
-	db 40, BODY_SLAM
-	db 43, HEALINGLIGHT ; Moonlight → similar move
-	db 46, MOONBLAST
+	db 34, EXTRASENSORY ; Cosmic Power
+	db 36, LIGHT_SCREEN ; Lucky Chant → TM move
+	db 40, HEALINGLIGHT ; Moonlight → similar move
+	db 44, MOONBLAST
 	db 49, BELLY_DRUM ; Gravity → egg move
 	db 50, EXTRASENSORY ; Meteor Mash → new move
 	db 55, HEAL_BELL ; Healing Wish → HGSS tutor move
@@ -3473,9 +3473,9 @@ QuilavaEvosAttacks:
 	db 6, SMOKESCREEN
 	db 10, EMBER
 	db 13, QUICK_ATTACK
-	db 20, DEFENSE_CURL ; Flame Wheel → Defense Curl
-	db 24, FLAME_CHARGE ; Defense Curl → Flame Charge
-	db 31, SWIFT
+	db 18, DEFENSE_CURL ; Flame Wheel → Defense Curl
+	db 23, FLAME_CHARGE ; Defense Curl → Flame Charge
+	db 25, SWIFT
 	db 35, DIG ; Flame Charge → TM move
 	db 42, REVERSAL ; Lava Plume → egg move
 	db 46, FLAMETHROWER
@@ -3488,6 +3488,7 @@ QuilavaEvosAttacks:
 
 TyphlosionEvosAttacks:
 	db 0 ; no more evolutions
+	db 0 ; no more level-up moves
 	db 1, FIRE_PUNCH ; evolution move
 	db 1, TACKLE
 	db 1, LEER
@@ -3498,6 +3499,9 @@ TyphlosionEvosAttacks:
 	db 24, FLAME_CHARGE ; Defense Curl → Flame Charge
 	db 31, SWIFT
 	db 35, DIG ; Flame Charge → TM move
+if !DEF(FAITHFUL)
+	db 40, SHADOW_BALL ; TM/Hisuian
+endc
 	db 43, REVERSAL ; Lava Plume → egg move
 	db 48, FLAMETHROWER
 	db 56, EARTH_POWER ; Inferno → new move
