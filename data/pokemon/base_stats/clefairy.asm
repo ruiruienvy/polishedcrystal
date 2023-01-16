@@ -1,5 +1,10 @@
+if DEF(FAITHFUL)
 	db  70,  45,  48,  35,  60,  65 ; 323 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  70,  50,  52,  45,  68,  67 ; 353 BST
+	;   hp  atk  def  spd  sat  sdf 
+endc
 
 	db FAIRY, FAIRY ; type
 	db 150 ; catch rate
